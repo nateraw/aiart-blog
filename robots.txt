@@ -1,1 +1,1 @@
-Sitemap: https://github.com/nateraw/aiart-blog/sitemap.xml
+Sitemap: https://www.aiart.dev/sitemap.xml
