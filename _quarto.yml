@@ -20,8 +20,6 @@ format:
   html:
     theme: lux
     css: styles.css
-    background-image: "profile.jpg"
-    parallax-background-size: contain 
 
 execute:
   freeze: auto
