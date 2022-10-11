@@ -5,6 +5,7 @@ project:
 website:
   title: "aiart.dev"
   twitter-card: true
+  favicon: favicon.ico
   site-url: "https://www.aiart.dev"
   navbar:
     right:
