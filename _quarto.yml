@@ -4,6 +4,8 @@ project:
 
 website:
   title: "aiart.dev"
+  twitter-card: true
+  site-url: "https://www.aiart.dev"
   navbar:
     right:
       - about.qmd
