@@ -553,6 +553,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>        text_embeddings <span class="op">=</span> <span class="va">self</span>.text_encoder(text_input_ids.to(<span class="va">self</span>.device))[<span class="dv">0</span>]</span>
 <span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
 <span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>        batch_size <span class="op">=</span> text_embeddings.shape[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here’s the full code for our <code>StableDiffusionWalkPipeline</code>:</p>
 <div class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> inspect</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Optional, Union, List, Callable</span>
