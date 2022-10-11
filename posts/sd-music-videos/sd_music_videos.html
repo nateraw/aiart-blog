@@ -805,7 +805,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="interpolating-to-the-beat-of-a-song" class="level2">
 <h2 class="anchored" data-anchor-id="interpolating-to-the-beat-of-a-song">Interpolating to the Beat of a Song</h2>
 <p>Now we’re talking! But how might we now move this video to the beat of a song?</p>
-<p>Above, we were moving between images <em>linearly</em>. What we want to do is: - move more when the energy of a given audio clip is high (it’s load) - move less when the energy is low (it’s quiet).</p>
+<p>Above, we were moving between images <em>linearly</em>. What we want to do is:</p>
+<ul>
+<li>move more when the energy of a given audio clip is high (it’s load)</li>
+<li>move less when the energy is low (it’s quiet).</li>
+</ul>
 <p>We can achieve this by manipulating the weights at certain timesteps that we defined above as <code>T</code>. Instead of using <code>torch.linspace</code>, we’ll try to set these values based on some audio.</p>
 <p>Here we define a helper function to visualize numpy arrays. We’ll use this to help explain what we’re doing.</p>
 <div class="cell" data-execution_count="50">
