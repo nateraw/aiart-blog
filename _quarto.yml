@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: "docs"
+
+website:
+  title: "aiart.dev"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/nateraw
+      - icon: twitter
+        href: https://twitter.com/_nateraw
+format:
+  html:
+    theme: lux
+    css: styles.css
+    background-image: "profile.jpg"
+    parallax-background-size: contain 

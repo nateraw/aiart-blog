@@ -1,0 +1,19 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/_nateraw
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/nathan-raw/
+    - icon: github
+      text: Github
+      href: https://github.com/nateraw
+
+---
+
+This blog is a dedicated place for me to share AI Art related tips, tricks, blogposts, and codebases I've found helpful.
