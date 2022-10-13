@@ -1,0 +1,14 @@
+/* css styles */
+
+#quarto-content {
+    display: flex;
+}
+/* Make quarto-document-content full width and height */
+#quarto-document-content {
+  width: 100%;
+}
+
+/* Make .gradio-container full width and height */
+.gradio-container {
+  background-color: white;
+}
