@@ -4,11 +4,23 @@ listing:
   contents: posts
   sort: "date desc"
   type: default
-  categories: true
+  categories: false
   sort-ui: false
   filter-ui: false
 page-layout: full
 title-block-banner: true
 ---
+
+# aiart.dev
+
+Let's create something awesome!
+
+### Gallery
+
+Check out the [gallery](gallery.qmd) to see some AI generated images
+
+---
+
+### Blog
 
 

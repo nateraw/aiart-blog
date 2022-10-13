@@ -9,9 +9,9 @@ website:
   site-url: "https://www.aiart.dev"
   navbar:
     right:
-      - about.qmd
+      - gallery.qmd
       - icon: github
-        href: https://github.com/nateraw
+        href: https://github.com/nateraw/aiart-blog
       - icon: twitter
         href: https://twitter.com/_nateraw
   google-analytics: G-QQ37HV1W85

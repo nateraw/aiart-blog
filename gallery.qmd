@@ -1,0 +1,9 @@
+---
+title: Gallery
+format:
+  html:
+    smooth-scroll: true
+    css: gradio_styles.css
+---
+
+<iframe src="https://hf.space/embed/nateraw/stable_diffusion_gallery/+" width="100%" height="100%"></iframe>
