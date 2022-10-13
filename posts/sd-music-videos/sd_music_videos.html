@@ -250,6 +250,15 @@ gtag('config', 'G-QQ37HV1W85', { 'anonymize_ip': true});
 <li>consider giving this <a href="https://github.com/nateraw/stable-diffusion-videos">repo a star</a> ⭐️</li>
 <li>consider following me on Github <a href="https://github.com/nateraw"><span class="citation" data-cites="nateraw">@nateraw</span></a></li>
 </ul>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<p>Here are some examples of videos you’ll be able to generate using the techniques we describe below:</p>
+<ul>
+<li><a href="https://twitter.com/_nateraw/status/1578049976206237705">Example 1</a></li>
+<li><a href="https://twitter.com/_nateraw/status/1578056368078086144">Example 2</a></li>
+<li><a href="https://twitter.com/_nateraw/status/1580322593240133632">Example 3</a></li>
+</ul>
+</section>
 <section id="background" class="level3">
 <h3 class="anchored" data-anchor-id="background">Background</h3>
 <p>You probably remember seeing videos like this, where folks were interpolating the latent space of StyleGAN models:</p>
@@ -271,6 +280,7 @@ gtag('config', 'G-QQ37HV1W85', { 'anonymize_ip': true});
 </ol>
 <p>All else remaining constant, if you pass the <em>same</em> noise vector to the model more than once, it will generate the <strong>exact same image</strong>.</p>
 <p>However, <strong>if you change that noise vector</strong> a different collection of samples drawn from a normal distribution, <strong>you’ll get a different image</strong>.</p>
+<p>For a more in depth explanation of how diffusion models work, check out this <a href="https://huggingface.co/blog/annotated-diffusion">legendary writeup on the Hugging Face blog</a>.</p>
 </section>
 <section id="interpolating-the-latent-space-eli5" class="level3">
 <h3 class="anchored" data-anchor-id="interpolating-the-latent-space-eli5">Interpolating the Latent Space ELI5</h3>
@@ -834,7 +844,7 @@ gtag('config', 'G-QQ37HV1W85', { 'anonymize_ip': true});
 <p>Now we’re talking! But how might we now move this video to the beat of a song?</p>
 <p>Above, we were moving between images <em>linearly</em>. What we want to do is:</p>
 <ul>
-<li>move more when the energy of a given audio clip is high (it’s load)</li>
+<li>move more when the energy of a given audio clip is high (it’s loud)</li>
 <li>move less when the energy is low (it’s quiet).</li>
 </ul>
 <p>We can achieve this by manipulating the weights at certain timesteps that we defined above as <code>T</code>. Instead of using <code>torch.linspace</code>, we’ll try to set these values based on some audio.</p>
@@ -1027,11 +1037,12 @@ gtag('config', 'G-QQ37HV1W85', { 'anonymize_ip': true});
 </ol></li>
 <li>You can mess with the <code>margin</code> kwarg in <code>librosa.effects.hpss</code> to increase/decrease the intensity of the effect we made here.</li>
 <li>There are TONs of ways to do what we did here, this is just one way. Feel free to experiment with creating your own <code>T</code>.</li>
+<li>The NSFW filter can be too liberal at times when generating videos. I tend to remove it when I’m generating videos for myself, but it’s a good idea to keep it in when you’re sharing your videos with others. Please do this responsibly.</li>
 </ul>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Today we saw how to create music videos using Stable Diffusion! If you want a nice interface for doing this, you should check out the <a href="https://github.com/nateraw/stable-diffusion-videos">Stable Diffusion Videos repo</a>, where all of this is wrapped up nicely for you.</p>
+<p>Today we saw how to create music videos using Stable Diffusion! If you want a nice interface for doing this, you should check out the <a href="https://github.com/nateraw/stable-diffusion-videos">Stable Diffusion Videos repo</a>, where all of this is wrapped up nicely for you (Check the README for instructions on how to use it for music videos).</p>
 <p>If you found this notebook helpful:</p>
 <ul>
 <li>consider giving this <a href="https://github.com/nateraw/stable-diffusion-videos">repo a star</a> ⭐️</li>
