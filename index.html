@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -104,7 +104,6 @@ gtag('config', 'G-QQ37HV1W85', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="aiart.dev">
-<meta name="twitter:description" content="Let’s create something awesome!">
 <meta name="twitter:image" content="https://www.aiart.dev/posts/sd-music-videos/thumbnail.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -126,17 +125,18 @@ gtag('config', 'G-QQ37HV1W85', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./gallery.html">Gallery</a>
+    <a class="nav-link" href="./gallery.html">
+ <span class="menu-text">Gallery</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/nateraw/aiart-blog"><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/_nateraw"><i class="bi bi-twitter" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -156,6 +156,7 @@ gtag('config', 'G-QQ37HV1W85', { 'anonymize_ip': true});
   <div class="quarto-title-meta">
 
       
+    
       
     </div>
     
@@ -170,14 +171,14 @@ gtag('config', 'G-QQ37HV1W85', { 'anonymize_ip': true});
 
 
 
-<section id="aiart.dev" class="level1">
-<h1>aiart.dev</h1>
-<p>Let’s create something awesome!</p>
-<section id="gallery" class="level3">
-<h3 class="anchored" data-anchor-id="gallery">Gallery</h3>
-<p>Check out the <a href="./gallery.html">gallery</a> to see some AI generated images</p>
+<hr>
+<section id="if-you-want-to-buy-this-domain-dm-me-on-twitter" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-want-to-buy-this-domain-dm-me-on-twitter">❗ If you want to buy this domain, DM me on <a href="https://twitter.com/_nateraw">Twitter</a> ❗</h3>
 <hr>
 </section>
+<section id="aiart.dev" class="level1">
+<h1>aiart.dev</h1>
+<hr>
 <section id="blog" class="level3">
 <h3 class="anchored" data-anchor-id="blog">Blog</h3>
 
@@ -188,7 +189,7 @@ gtag('config', 'G-QQ37HV1W85', { 'anonymize_ip': true});
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="code,guide,stable-diffusion" data-listing-date-sort="1665446400000" data-listing-file-modified-sort="1665685117103" data-listing-reading-time-sort="9.625">
+<div class="quarto-post image-right" data-index="0" data-categories="code,guide,stable-diffusion" data-listing-date-sort="1665446400000" data-listing-file-modified-sort="1680906193578" data-listing-reading-time-sort="9.625">
 <div class="thumbnail">
 <p><a href="./posts/sd-music-videos/sd_music_videos.html"> <img src="./posts/sd-music-videos/thumbnail.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -262,7 +263,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -298,24 +316,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

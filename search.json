@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "aiart.dev",
-    "section": "",
-    "text": "Creating AI Music Videos with Stable Diffusion\n\n\n\n\n\nA tutorial on how to create AI music videos using the text-to-image model Stable Diffusion.\n\n\n\n\n\n\nOct 11, 2022\n\n\nNate Raw\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/sd-music-videos/sd_music_videos.html",
     "href": "posts/sd-music-videos/sd_music_videos.html",
     "title": "Creating AI Music Videos with Stable Diffusion",
@@ -47,5 +40,12 @@
     "title": "Creating AI Music Videos with Stable Diffusion",
     "section": "Conclusion",
     "text": "Conclusion\nToday we saw how to create music videos using Stable Diffusion! If you want a nice interface for doing this, you should check out the Stable Diffusion Videos repo, where all of this is wrapped up nicely for you (Check the README for instructions on how to use it for music videos).\nIf you found this notebook helpful:\n\nconsider giving this repo a star ⭐️\nconsider following me on Github @nateraw\n\nThanks for reading! Cheers 🍻"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "aiart.dev",
+    "section": "",
+    "text": "❗ If you want to buy this domain, DM me on Twitter ❗\n\n\n\naiart.dev\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nCreating AI Music Videos with Stable Diffusion\n\n\n\n\n\nA tutorial on how to create AI music videos using the text-to-image model Stable Diffusion.\n\n\n\n\n\n\nOct 11, 2022\n\n\nNate Raw\n\n\n\n\n\n\nNo matching items"
   }
 ]
