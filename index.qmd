@@ -11,13 +11,13 @@ page-layout: full
 title-block-banner: true
 ---
 
+---
+
+### ❗ If you want to buy this domain, DM me on [Twitter](https://twitter.com/_nateraw) ❗
+
+---
+
 # aiart.dev
-
-Let's create something awesome!
-
-### Gallery
-
-Check out the [gallery](gallery.qmd) to see some AI generated images
 
 ---
 
